@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | りゅう動画屋さん</title>
+<meta name="description" content="動画制作・YouTube運用代行についてのお問い合わせフォームです。">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <!-- スマホ用トップバー -->
+  <div class="mobile-top-bar">
+    <div class="mobile-top-phone-group">
+      <a href="tel:08064065862">080-6406-5862</a>
+      <span>10:00〜17:00 土日祝除く</span>
+    </div>
+  </div>
+  <div class="header-inner">
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html" class="logo">りゅう動画屋さん</a></li>
+        <li><a href="index.html#strengths">弊社の強み</a></li>
+        <li><a href="index.html#services">サービス</a></li>
+        <li><a href="index.html#works">制作実績</a></li>
+        <li><a href="index.html#price">料金</a></li>
+        <li><a href="index.html#faq">よくあるご質問</a></li>
+        <li class="nav-item-simulation"><a href="contact.html" target="_blank" class="header-cta header-cta--simulation">お見積り相談</a></li>
+        <li class="nav-item-contact"><a href="contact.html" target="_blank" class="header-cta">お問い合わせ</a></li>
+        <li class="header-phone">
+          <a href="tel:08064065862">080-6406-5862</a>
+          <span>10:00~17:00 土日祝除く</span>
+        </li>
+      </ul>
+    </nav>
+    <a href="index.html" class="mobile-header-logo">りゅう動画屋さん</a>
+    <a href="contact.html" target="_blank" class="mobile-header-contact">お問い合わせ</a>
+    <div class="mobile-header-phone">
+      <a href="tel:08064065862">080-6406-5862</a>
+      <span>10:00〜17:00 土日祝除く</span>
+    </div>
+    <button class="menu-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- モバイルナビ ドロワー -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="index.html#strengths" class="mobile-nav-link">弊社の強み</a></li>
+      <li><a href="index.html#services" class="mobile-nav-link">サービス</a></li>
+      <li><a href="index.html#works" class="mobile-nav-link">制作実績</a></li>
+      <li><a href="index.html#price" class="mobile-nav-link">料金</a></li>
+      <li><a href="index.html#faq" class="mobile-nav-link">よくあるご質問</a></li>
+      <li class="mobile-nav-cta-wrap">
+        <a href="contact.html" target="_blank" class="mobile-nav-cta">お見積り相談</a>
+        <a href="contact.html" target="_blank" class="mobile-nav-cta">お問い合わせ</a>
+      </li>
+      <li class="mobile-nav-phone-wrap">
+        <a href="tel:08064065862">080-6406-5862</a>
+        <span>10:00~17:00 土日祝除く</span>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== Contact Page ===== -->
+<section class="contact-page">
+  <div class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>お問い合わせ</h1>
+      <p class="contact-hero-desc">動画制作や運用に関するご相談は<br>下記のフォームよりお気軽にお問い合わせください</p>
+    </div>
+  </div>
+
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- 送信完了メッセージ（送信前は非表示） -->
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="form-success-inner">
+            <div class="form-success-icon"><img src="かき/18.png" alt="完了" style="width:100%; height:100%; object-fit:contain;"></div>
+            <h2>お問い合わせありがとうございます</h2>
+            <p>内容を確認の上、担当者よりご連絡いたします。<br>しばらくお待ちください。</p>
+            <a href="index.html" class="btn btn-primary" style="margin-top:24px; display:inline-block;">トップページへ戻る</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label>名前<span class="required">*必須</span></label>
+            <div class="form-name-row">
+              <input type="text" id="sei" name="sei" placeholder="田中" required>
+              <input type="text" id="mei" name="mei" placeholder="太郎" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>カナ<span class="required">*必須</span></label>
+            <div class="form-name-row">
+              <input type="text" id="kana-sei" name="kana-sei" placeholder="タナカ" required>
+              <input type="text" id="kana-mei" name="kana-mei" placeholder="タロウ" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス<span class="required">*必須</span></label>
+            <input type="email" id="email" name="email" placeholder="sample@example.com" required>
+          </div>
+          <div class="form-group" style="margin-top:10px;">
+            <label for="phone">電話番号<span class="required">*必須</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="080-1234-5678" required>
+          </div>
+          <div class="form-group">
+            <label for="company">会社名</label>
+            <input type="text" id="company" name="company" placeholder="株式会社〇〇">
+          </div>
+          <div class="form-group">
+            <label>ご検討中のサービス</label>
+            <div class="form-check-group">
+              <label class="form-check-label"><input type="checkbox" name="services" value="長尺動画編集"> 長尺動画編集</label>
+              <label class="form-check-label"><input type="checkbox" name="services" value="ショート動画編集"> ショート動画編集</label>
+              <label class="form-check-label"><input type="checkbox" name="services" value="SNS運用代行"> SNS運用代行</label>
+              <label class="form-check-label"><input type="checkbox" name="services" value="サムネイル制作"> サムネイル制作</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="deadline">完成期限</label>
+            <input type="text" id="deadline" name="deadline" placeholder="〇月〇日までに">
+          </div>
+          <div class="form-group">
+            <label for="message">ご相談内容</label>
+            <textarea id="message" name="message" rows="5" placeholder=""></textarea>
+          </div>
+          <p class="form-error" id="formError" style="display:none; color:#dc2626; text-align:center; margin-top:8px;">
+            送信に失敗しました。お手数ですが、お電話にてご連絡ください。
+          </p>
+          <button type="submit" class="btn btn-primary" id="submitBtn">入力内容を送信</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact-info-bar">
+    <div class="contact-info">
+      <h3>お電話でのお問い合わせ</h3>
+      <p><a href="tel:08064065862">080-6406-5862</a></p>
+      <p class="contact-info-time">10:00〜17:00<br>月曜〜金曜（土日祝除く）</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo logo-light">りゅう動画屋さん</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <small>&copy; 2026 りゅう動画屋さん. All Rights Reserved.</small>
+  </div>
+</footer>
+
+<script>
+  const EMAILJS_PUBLIC_KEY  = 'kObGl_pQiKf6im3PF';
+  const EMAILJS_SERVICE_ID  = 'service_2pgnfga';
+  const EMAILJS_TEMPLATE_ID = 'template_wrcz649';
+
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+
+  function hiraganaToKatakana(str) {
+    return str.replace(/[ぁ-ゖ]/g, ch =>
+      String.fromCharCode(ch.charCodeAt(0) + 0x60)
+    );
+  }
+
+  function setupAutoKana(nameId, kanaId) {
+    const nameEl = document.getElementById(nameId);
+    const kanaEl = document.getElementById(kanaId);
+    let committed = '';
+    let current = '';
+
+    nameEl.addEventListener('compositionstart', () => {
+      current = '';
+    });
+    nameEl.addEventListener('compositionupdate', (e) => {
+      const kana = (e.data || '').replace(/[^぀-ゟ]/g, '');
+      if (kana) current = kana;
+      kanaEl.value = hiraganaToKatakana(committed + current);
+    });
+    nameEl.addEventListener('compositionend', () => {
+      if (current) { committed += current; current = ''; }
+      kanaEl.value = hiraganaToKatakana(committed);
+    });
+    nameEl.addEventListener('input', () => {
+      if (!nameEl.value) { committed = ''; current = ''; kanaEl.value = ''; }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // ===== モバイルメニュー =====
+    var menuToggle = document.querySelector('.menu-toggle');
+    var mobileNav = document.getElementById('mobile-nav');
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener('click', function() {
+        var isOpen = mobileNav.classList.contains('open');
+        mobileNav.classList.toggle('open');
+        menuToggle.classList.toggle('open');
+        mobileNav.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+      document.querySelectorAll('.mobile-nav-link, .mobile-nav-cta').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('open');
+          menuToggle.classList.remove('open');
+          mobileNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    setupAutoKana('sei', 'kana-sei');
+    setupAutoKana('mei', 'kana-mei');
+    const form       = document.getElementById('contactForm');
+    const submitBtn  = document.getElementById('submitBtn');
+    const successDiv = document.getElementById('formSuccess');
+    const errorMsg   = document.getElementById('formError');
+
+    const requiredIds = ['sei', 'mei', 'kana-sei', 'kana-mei', 'email', 'phone'];
+
+    requiredIds.forEach(id => {
+      document.getElementById(id).addEventListener('input', function() {
+        if (this.value.trim()) this.classList.remove('input-error');
+      });
+    });
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      errorMsg.style.display = 'none';
+
+      let hasError = false;
+      requiredIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) {
+          el.classList.add('input-error');
+          hasError = true;
+        } else {
+          el.classList.remove('input-error');
+        }
+      });
+      if (hasError) return;
+
+      const checkedServices = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+        .map(cb => cb.value);
+
+      const templateParams = {
+        name:     document.getElementById('sei').value.trim() + ' ' + document.getElementById('mei').value.trim(),
+        kana:     document.getElementById('kana-sei').value.trim() + ' ' + document.getElementById('kana-mei').value.trim(),
+        email:    document.getElementById('email').value.trim(),
+        phone:    document.getElementById('phone').value.trim(),
+        company:  document.getElementById('company').value.trim() || '未入力',
+        services: checkedServices.length ? checkedServices.join('、') : '未選択',
+        deadline: document.getElementById('deadline').value.trim() || '未入力',
+        message:  document.getElementById('message').value.trim() || '未入力',
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '送信中…';
+
+      try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+        form.style.display = 'none';
+        successDiv.style.display = 'block';
+        window.scrollTo({ top: successDiv.offsetTop - 80, behavior: 'smooth' });
+      } catch (err) {
+        errorMsg.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = '入力内容を送信';
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.animate-item').forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>りゅう動画屋さん | 動画編集・YouTube運用代行</title>
+<meta name="description" content="プロフェッショナルな動画編集とYouTube運用代行サービス。企業・個人のブランド価値を最大化します。">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Reggae+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== File Protocol Warning ===== -->
+<div id="file-protocol-warning" style="display:none;position:fixed;top:0;left:0;right:0;z-index:9999;background:#c0392b;color:#fff;text-align:center;padding:12px 16px;font-size:14px;line-height:1.5;">
+  ⚠️ <strong>ローカルファイル直開きでは YouTube 動画が再生できません。</strong>
+  　<code style="background:rgba(0,0,0,.25);padding:2px 6px;border-radius:3px;">npx live-server</code> などでローカルサーバーを起動してご確認ください。
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <!-- スマホ用トップバー -->
+  <div class="mobile-top-bar">
+    <div class="mobile-top-phone-group">
+      <a href="tel:08064065862">080-6406-5862</a>
+      <span>10:00〜17:00 土日祝除く</span>
+    </div>
+  </div>
+  <div class="header-inner">
+    <nav class="global-nav">
+      <ul>
+        <li><a href="#" class="logo">りゅう動画屋さん</a></li>
+        <li><a href="#strengths">弊社の強み</a></li>
+        <li><a href="#services">サービス</a></li>
+        <li><a href="#works">制作実績</a></li>
+        <li><a href="#price">料金</a></li>
+        <li><a href="#faq">よくあるご質問</a></li>
+        <li class="nav-item-simulation"><a href="contact.html" target="_blank" class="header-cta header-cta--simulation">お見積り相談</a></li>
+        <li class="nav-item-contact"><a href="contact.html" target="_blank" class="header-cta">お問い合わせ</a></li>
+        <li class="header-phone">
+          <a href="tel:08064065862">080-6406-5862</a>
+          <span>10:00~17:00 土日祝除く</span>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="mobile-header-logo">りゅう動画屋さん</a>
+    <a href="contact.html" target="_blank" class="mobile-header-contact">お問い合わせ</a>
+    <div class="mobile-header-phone">
+      <a href="tel:08064065862">080-6406-5862</a>
+      <span>10:00〜17:00 土日祝除く</span>
+    </div>
+    <button class="menu-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- モバイルナビ ドロワー -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="#strengths" class="mobile-nav-link">弊社の強み</a></li>
+      <li><a href="#services" class="mobile-nav-link">サービス</a></li>
+      <li><a href="#works" class="mobile-nav-link">制作実績</a></li>
+      <li><a href="#price" class="mobile-nav-link">料金</a></li>
+      <li><a href="#faq" class="mobile-nav-link">よくあるご質問</a></li>
+      <li class="mobile-nav-cta-wrap">
+        <a href="contact.html" target="_blank" class="mobile-nav-cta">お見積り相談</a>
+        <a href="contact.html" target="_blank" class="mobile-nav-cta">お問い合わせ</a>
+      </li>
+      <li class="mobile-nav-phone-wrap">
+        <a href="tel:08064065862">080-6406-5862</a>
+        <span>10:00~17:00 土日祝除く</span>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline webkit-playsinline x5-playsinline preload="auto" id="hero-video">
+      <source src="かき/8.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <p class="hero-sub">動画制作からSNS運用まで一括サポート</p>
+    <h1 class="hero-title">
+      <span class="hero-title-line">伝わる動画で</span>
+      <span class="hero-title-line">売上と認知を伸ばす</span>
+    </h1>
+    <p class="hero-lead">編集・分析・運用までワンストップ対応<br>ビジネスの成長を動画の力で後押しします</p>
+    <div class="hero-actions">
+      <p class="hero-proposal-text">予算に合わせてご提案</p>
+      <a href="contact.html" target="_blank" class="btn btn-primary">無料相談はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Worries ===== -->
+<section class="section worries">
+  <div class="container">
+    <div class="worries-center animate-item">
+      <h2 class="worries-title">動画編集で<br class="sp-break">このようなお悩みありませんか？</h2>
+      <div class="worries-row">
+        <img src="かき/13.png" alt="" class="worries-char worries-char--left">
+        <ul class="worries-list">
+          <li>動画編集に<span class="worries-accent">時間がかかりすぎている</span></li>
+          <li>投稿しても<span class="worries-accent">再生数が伸びない</span></li>
+          <li>クリックされやすい<span class="worries-accent">サムネイルが作れない</span></li>
+          <li>依頼したいけど<span class="worries-accent">料金が高すぎる</span></li>
+          <li>SEOを意識した<span class="worries-accent">運用・分析ができない</span></li>
+        </ul>
+        <img src="かき/17.png" alt="" class="worries-char worries-char--right">
+      </div>
+    </div>
+    <div class="entrust-block animate-item">
+      <img src="かき/15.png" alt="" class="entrust-speedlines">
+      <div class="entrust-content">
+        <h3 class="entrust-title">これらのお悩み<br><span style="color:#e01010;">りゅう動画屋さんが解決します</span></h3>
+        <p class="entrust-desc">お客様一人一人に合わせた<br class="sp-break">動画制作をお約束いたします</p>
+      </div>
+    </div>
+    <div class="entrust-cta animate-item">
+      <a href="contact.html" target="_blank" class="btn btn-primary">無料相談はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Strengths ===== -->
+<section id="strengths" class="section strengths">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">りゅう動画屋さんの強み</h2>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card animate-item">
+        <div class="feature-card-top">
+          <div class="feature-image feature-image-1"></div>
+        </div>
+        <h3>迅速な対応力</h3>
+        <p>素早いレスポンスと柔軟な対応で<br><span style="padding-left:10px;">スムーズな制作進行をお約束</span></p>
+      </article>
+      <article class="feature-card animate-item">
+        <div class="feature-card-top">
+          <div class="feature-image feature-image-2"></div>
+        </div>
+        <h3>低コスト・高品質</h3>
+        <p>効率化により<br>価格×高品質を実現</p>
+      </article>
+      <article class="feature-card animate-item">
+        <div class="feature-card-top">
+          <div class="feature-image feature-image-3"></div>
+        </div>
+        <h3>結果へのこだわり</h3>
+        <p>目的達成を最優先に<br>結果を意識した構成をご提案</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section id="services" class="section services">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">サービス内容</h2>
+    </div>
+    <div class="service-list">
+      <article class="service-card animate-item">
+        <div class="service-card-top">
+          <div class="service-image service-image-edit"></div>
+        </div>
+        <h3>動画編集</h3>
+        <p>細部まで手を抜かず<br>品質にこだわって編集いたします</p>
+      </article>
+      <article class="service-card animate-item">
+        <div class="service-card-top">
+          <div class="service-image service-image-youtube"></div>
+        </div>
+        <h3>SNS運用代行</h3>
+        <p>YouTube・Instagram・TikTokなど<br>最適な運用をサポートいたします</p>
+      </article>
+      <article class="service-card animate-item">
+        <div class="service-card-top">
+          <div class="service-image service-image-brand"></div>
+        </div>
+        <h3>サムネイル制作</h3>
+        <p>一瞬で惹きつける<br>サムネを制作いたします</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Works ===== -->
+<section id="works" class="section works">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">制作実績</h2>
+    </div>
+    <div class="works-grid">
+      <article class="work-card animate-item">
+        <div class="work-thumb work-thumb--playable" data-video-id="_rFNiP8z-Hs">
+          <img src="https://img.youtube.com/vi/_rFNiP8z-Hs/maxresdefault.jpg" alt="サービス紹介動画">
+        </div>
+        <div class="work-body">
+          <span class="work-tag">YouTube</span>
+          <h3 class="work-title">サービス紹介動画</h3>
+        </div>
+      </article>
+      <article class="work-card animate-item">
+        <div class="work-thumb work-thumb--playable" data-video-id="8HlCHhMZmAU">
+          <img src="かき/19.webp" alt="広告動画">
+        </div>
+        <div class="work-body">
+          <span class="work-tag">LINE</span>
+          <h3 class="work-title">広告動画</h3>
+        </div>
+      </article>
+      <article class="work-card animate-item">
+        <div class="work-thumb work-thumb--playable" data-video-id="rocjFG1XRlY">
+          <img src="https://img.youtube.com/vi/rocjFG1XRlY/maxresdefault.jpg" alt="利益商品紹介">
+        </div>
+        <div class="work-body">
+          <span class="work-tag">YouTube</span>
+          <h3 class="work-title">利益商品紹介</h3>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section id="process" class="section process">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">動画完成のプロセス</h2>
+    </div>
+    <div class="process-grid">
+      <article class="process-card animate-item">
+        <div class="process-illustration-wrap">
+          <div class="process-step-badge">STEP1</div>
+          <div class="process-illustration process-illustration-1"></div>
+        </div>
+        <h3>お問い合わせ</h3>
+        <p>まずはお気軽に<br>お問い合わせ下さい</p>
+      </article>
+      <div class="process-arrow animate-item">
+        <img src="かき/6.png" alt="矢印">
+      </div>
+      <article class="process-card animate-item">
+        <div class="process-illustration-wrap">
+          <div class="process-step-badge">STEP2</div>
+          <div class="process-illustration process-illustration-2"></div>
+        </div>
+        <h3>お見積相談</h3>
+        <p>ご要望に応じた<br>プランと価格をご案内</p>
+      </article>
+      <div class="process-arrow animate-item">
+        <img src="かき/6.png" alt="矢印">
+      </div>
+      <article class="process-card animate-item">
+        <div class="process-illustration-wrap">
+          <div class="process-step-badge">STEP3</div>
+          <div class="process-illustration process-illustration-3"></div>
+        </div>
+        <h3>編集</h3>
+        <p>カット・テロップ<br>効果音＆BGM挿入<br>その他の編集を行います</p>
+      </article>
+      <div class="process-arrow animate-item">
+        <img src="かき/6.png" alt="矢印">
+      </div>
+      <article class="process-card animate-item">
+        <div class="process-illustration-wrap">
+          <div class="process-step-badge">STEP4</div>
+          <div class="process-illustration process-illustration-4"></div>
+        </div>
+        <h3>納品</h3>
+        <p>完成した動画を納品<br>必要に応じて<br>最終調整を行います</p>
+      </article>
+    </div>
+    <div class="process-action">
+      <div class="process-action-inner">
+        <p class="process-free-guide">✨ 無料でご案内</p>
+        <a href="contact.html" target="_blank" class="btn btn-primary btn--wide">見積り相談</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Price ===== -->
+<section id="price" class="price-cta">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">料金プラン</h2>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section faq">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">よくあるご質問</h2>
+    </div>
+
+    <div class="faq-list">
+      <article class="faq-item">
+        <h4><span class="faq-tag faq-tag--q">Q</span> 制作期間はどれくらいかかりますか?</h4>
+        <p><span class="faq-tag faq-tag--a">A</span> 動画の内容や長さによりますが、<br>通常2〜4週間程度を目安にしております。<br>お急ぎの場合はご相談ください。</p>
+      </article>
+      <article class="faq-item">
+        <h4><span class="faq-tag faq-tag--q">Q</span> 見積もりは無料ですか?</h4>
+        <p><span class="faq-tag faq-tag--a">A</span> はい。お見積もり及びご相談は無料です。<br>お気軽にお問い合わせフォームよりご連絡ください。</p>
+      </article>
+      <article class="faq-item">
+        <h4><span class="faq-tag faq-tag--q">Q</span> 修正は何回まで対応していただけますか?</h4>
+        <p><span class="faq-tag faq-tag--a">A</span> スタンダードプランでは2回まで、<br>プレミアムプランでは5回まで無料で承っております。</p>
+      </article>
+      <article class="faq-item">
+        <h4><span class="faq-tag faq-tag--q">Q</span> プラン内の一部だけ依頼することは可能ですか?</h4>
+        <p><span class="faq-tag faq-tag--a">A</span> プラン内容の一部のみのご依頼も可能です。<br>内容に応じて料金は個別にお見積りいたします。</p>
+      </article>
+      <article class="faq-item">
+        <h4><span class="faq-tag faq-tag--q">Q</span> 素材は自分たちで用意する必要がありますか?</h4>
+        <p><span class="faq-tag faq-tag--a">A</span> お客様にてご用意いただくこともございますが、こちらで対応することも可能です。お気軽にご相談下さい。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Modal ===== -->
+<div id="work-modal" class="work-modal" role="dialog" aria-modal="true">
+  <div class="work-modal__overlay"></div>
+  <div class="work-modal__content">
+    <button class="work-modal__close" aria-label="閉じる">&#x2715;</button>
+    <div class="work-modal__body"></div>
+  </div>
+</div>
+
+<a href="#" class="back-to-top" id="backToTop" aria-label="トップへ戻る">▲</a>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo logo-light">りゅう動画屋さん</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <small>&copy; 2026 りゅう動画屋さん. All Rights Reserved.</small>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // ===== 背景動画の強制再生 =====
+    var heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+      heroVideo.load();
+      heroVideo.play().catch(function() {});
+      heroVideo.addEventListener('canplay', function() {
+        heroVideo.play().catch(function() {});
+      });
+    }
+
+    // ===== file:// プロトコル判定 =====
+    if (window.location.protocol === 'file:') {
+      var warn = document.getElementById('file-protocol-warning');
+      warn.style.display = 'block';
+      // ヘッダーをバナー分下げてかぶりを防ぐ
+      var header = document.querySelector('.site-header');
+      if (header) header.style.top = warn.offsetHeight + 'px';
+    }
+
+    // ===== モバイルメニュー =====
+    var menuToggle = document.querySelector('.menu-toggle');
+    var mobileNav = document.getElementById('mobile-nav');
+
+    menuToggle.addEventListener('click', function() {
+      var isOpen = mobileNav.classList.contains('open');
+      mobileNav.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+      mobileNav.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? '' : 'hidden';
+    });
+
+    document.querySelectorAll('.mobile-nav-link, .mobile-nav-cta').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ===== スクロールアニメーション =====
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.animate-item').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // ===== モーダル =====
+    var modal = document.getElementById('work-modal');
+    var modalBody = modal.querySelector('.work-modal__body');
+    var modalClose = modal.querySelector('.work-modal__close');
+    var modalOverlay = modal.querySelector('.work-modal__overlay');
+
+    function openModal(videoId) {
+      // 1. モーダルを先に表示（iframeより前）
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // 2. embed URL を組み立て（origin パラメータ付き）
+      var origin = encodeURIComponent(window.location.origin);
+      var src = 'https://www.youtube.com/embed/' + videoId
+        + '?autoplay=1&rel=0&modestbranding=1&origin=' + origin;
+
+      // 3. iframe を動的生成
+      var iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.setAttribute('loading', 'eager');
+      iframe.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+
+      // 4. モーダル内に挿入
+      modalBody.appendChild(iframe);
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      // iframe を完全削除
+      modalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    // サムネイルクリックでモーダルを開く
+    document.querySelectorAll('.work-thumb--playable').forEach(function(thumb) {
+      thumb.addEventListener('click', function() {
+        var videoId = thumb.getAttribute('data-video-id');
+        if (!videoId) return;
+        openModal(videoId);
+      });
+    });
+
+    // 閉じる操作（×ボタン・背景・Escキー）
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // ===== トップへ戻るボタン =====
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 300);
+      });
+      backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+  });
+</script>
+
+</body>
+</html>
